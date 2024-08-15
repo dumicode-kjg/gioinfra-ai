@@ -18,9 +18,9 @@ $(function () {
   });
   function scrollCheck() {
     if ($(window).scrollTop() > 100) {
-      $("#header").addClass("white");
+      $("#header, #mHeader").addClass("white");
     } else {
-      $("#header").removeClass("white");
+      $("#header, #mHeader").removeClass("white");
     }
   }
 
@@ -41,18 +41,9 @@ $(function () {
   });
 
   //GNB 모바일
-  $(".m_gnb > li > a").each(function () {
-    if ($(this).next(".depth_box").find("li").length > 0) {
-      $(this).addClass("in_ul");
-    }
-  });
-
   $(".m_gnb > li > a").on("click", function () {
     $(".m_gnb > li > a").not(this).removeClass("active");
-    $(this).toggleClass("active");
-
-    $(".m_gnb > li > .depth_box").not($(this).next(".depth_box")).slideUp(250);
-    $(this).next(".depth_box").stop(true, false).slideToggle(250);
+    $(this).addClass("active");
   });
 
   //foot banners
@@ -97,8 +88,17 @@ $(function () {
   });
 });
 
+//모바일 통합검색
+function toggleSearch() {
+  $("body").toggleClass("openSearch");
+  if ($("#m_search_wrap").css("display") !== "none") {
+    $("#mHeadSearch").focus();
+  }
+}
+
 //모바일 전체메뉴
 function toggleAllMenu() {
+  $("body").removeClass("openSearch");
   $("body").toggleClass("openAllMenu");
 }
 

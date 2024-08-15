@@ -210,13 +210,13 @@ menu {
 }
 
 ::-webkit-input-placeholder {
-  color: #727272;
+  color: #717171;
 }
 
 :-ms-input-placeholder {
-  color: #727272;
+  color: #717171;
 }
 
 ::placeholder {
-  color: #727272;
+  color: #717171;
 }
