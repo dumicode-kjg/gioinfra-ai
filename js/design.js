@@ -110,7 +110,7 @@ $(function () {
   });
 });
 function chkGoTop() {
-  if ($(window).scrollTop() > 200) {
+  if ($(window).scrollTop() > 100) {
     $(".go_top").show();
   } else {
     $(".go_top").hide();
