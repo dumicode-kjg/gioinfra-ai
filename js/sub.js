@@ -42,7 +42,11 @@ $(function () {
     $(this).parents(".sub_tabbox").find("li").removeClass("active");
     $(this).parent("li").addClass("active");
     $(this).parents(".js_tab").find(".js_tabcont").removeClass("active");
-    $(this).parents(".js_tab").find(".js_tabcont").eq($(".js_tab a").index(this)).addClass("active");
+    $(this)
+      .parents(".js_tab")
+      .find(".js_tabcont")
+      .eq($(".js_tab a").index(this))
+      .addClass("active");
 
     return false;
   });
@@ -58,3 +62,8 @@ $(function () {
     $(this).remove();
   });
 });
+
+//서브 공유하기 열기/닫기
+function shareToggle() {
+  $("#shareBox").toggle(0);
+}

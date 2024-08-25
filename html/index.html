@@ -25,7 +25,7 @@
 
   <body>
     <!-- 메인 공지팝업 -->
-    <div class="main_notice_pop" style="display: none">
+    <div class="main_notice_pop">
       <!-- pop_con 2개 이상일 경우 디폴트 순서층 이외 z-index로 층 조절 가능 -->
       <div class="pop_con" style="z-index: 5">
         <div class="img">
@@ -56,17 +56,6 @@
     </div>
     <!--// 메인 공지팝업 -->
 
-    <!-- 학술대회팝업 -->
-    <!-- <div class="main_notice_pop">
-      <div class="pop_con" style="width: 800px">
-        <div class="img"><img src="../images/img_pop_sample01.png" alt="" /></div>
-        <div class="btns">
-          <button class="btn_invisible"><span>오늘 하루 보지않기 </span></button>
-          <button class="btn_close"><span>닫기</span></button>
-        </div>
-      </div>
-    </div> -->
-    <!--// 학술대회팝업 -->
     <script>
       $(function () {
         // 팝업 닫기
@@ -328,15 +317,13 @@
             <ul class="swiper-wrapper">
               <li class="swiper-slide">
                 <div class="inbox">
-                  <a
-                    href="#"
-                    class="visual_img"
-                    style="background-image: url(../images/main/visual01.png)"
-                  ></a>
+                  <a href="#" class="visual_img">
+                    <img src="../images/main/visual01.png" alt="" />
+                  </a>
                   <div class="visual_txt">
                     <div class="titbox">
                       <h2 class="tit">
-                        지능형 혁신, 국가의 미래! <br />국가인공지능위원회
+                        지능형 혁신, 국가의 미래! 국가인공지능위원회
                       </h2>
                     </div>
                     <div class="txtbox">
@@ -359,15 +346,13 @@
               </li>
               <li class="swiper-slide">
                 <div class="inbox">
-                  <a
-                    href="#"
-                    class="visual_img"
-                    style="background-image: url(../images/main/visual02.png)"
-                  ></a>
+                  <a href="#" class="visual_img">
+                    <img src="../images/main/visual02.png" alt="" />
+                  </a>
                   <div class="visual_txt">
                     <div class="titbox">
                       <h2 class="tit">
-                        국가인공지능위원회 <br />지능형 혁신, 국가의 미래!
+                        국가인공지능위원회 지능형 혁신, 국가의 미래!
                       </h2>
                     </div>
                     <div class="txtbox">
@@ -505,6 +490,9 @@
                           slidesPerView: 3,
                           spaceBetween: 16,
                           breakpoints: {
+                            1279: {
+                              slidesPerView: 2,
+                            },
                             767: {
                               slidesPerView: 1,
                               slidesPerGroup: 1,
@@ -561,6 +549,9 @@
                           slidesPerView: 3,
                           spaceBetween: 16,
                           breakpoints: {
+                            1279: {
+                              slidesPerView: 2,
+                            },
                             767: {
                               slidesPerView: 1,
                               slidesPerGroup: 1,
@@ -775,9 +766,17 @@
                             slidesPerView: 5,
                             spaceBetween: 24,
                             breakpoints: {
+                              1279: {
+                                slidesPerView: 3,
+                                spaceBetween: 16,
+                              },
+                              1023: {
+                                slidesPerView: 2,
+                                spaceBetween: 16,
+                              },
                               767: {
                                 slidesPerView: 1,
-                                slidesPerGroup: 1,
+                                spaceBetween: 16,
                               },
                             },
                             observer: true,
@@ -795,9 +794,21 @@
                   <li>
                     <a href="#committee_tab02">분과 회의</a>
                     <div id="committee_tab02" class="in_cont">
-                      <!-- 내용없음 -->
-                      내용없음
-                      <!--// 내용없음 -->
+                      <!-- data없을시 -->
+                      <div class="nodata_box_wrap">
+                        <div class="nodata_box">
+                          <div
+                            class="ico"
+                            style="
+                              background-image: url(../images/bg_40_nodata_ffffff.svg);
+                            "
+                          ></div>
+                          <p class="txt" style="color: #fff">
+                            등록된 게시글이 없습니다.
+                          </p>
+                        </div>
+                      </div>
+                      <!--// data없을시 -->
                     </div>
                   </li>
                 </ul>
@@ -955,7 +966,7 @@
                           <div
                             class="img"
                             style="
-                              background-image: url(../images/main/img_cardnews03.png);
+                              background-image: url();
                             "
                           ></div>
                         </div>
@@ -967,6 +978,21 @@
                     </li>
                   </ul>
                 </div>
+                <!-- data없을시 -->
+                <!-- <div class="nodata_box_wrap">
+                  <div class="nodata_box">
+                    <div
+                      class="ico"
+                      style="
+                        background-image: url(../images/bg_40_nodata_8e8e8e.svg);
+                      "
+                    ></div>
+                    <p class="txt" style="color: #717171">
+                      등록된 게시글이 없습니다.
+                    </p>
+                  </div>
+                </div> -->
+                <!--// data없을시 -->
                 <div class="swiper_ctrl">
                   <button type="button" class="swiper-button-prev"></button>
                   <button type="button" class="swiper-button-next"></button>
@@ -979,9 +1005,12 @@
                       slidesPerView: 3,
                       spaceBetween: 24,
                       breakpoints: {
+                        1279: {
+                          spaceBetween: 16,
+                        },
                         767: {
                           slidesPerView: 1,
-                          slidesPerGroup: 1,
+                          spaceBetween: 16,
                         },
                       },
                       observer: true,
@@ -997,11 +1026,272 @@
             </div>
           </div>
           <!--// 정책공간 & 카드뉴스  -->
+
+          <!-- 사진 및 동영상 자료 -->
+          <div class="ma_media_wrap">
+            <div class="inner_center">
+              <div class="ma_media">
+                <div class="titlebox">
+                  <h2 class="title">사진 및 동영상 자료</h2>
+                </div>
+                <div class="media_swiper swiper-container">
+                  <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                      <a href="#" class="inbox">
+                        <div class="imgbox">
+                          <div
+                            class="img"
+                            style="
+                              background-image: url(../images/main/img_media01.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="txt">AI전략최고위협의회 출범식</div>
+                      </a>
+                    </li>
+                    <li class="swiper-slide">
+                      <a href="#" class="inbox">
+                        <div class="imgbox">
+                          <div
+                            class="img"
+                            style="
+                              background-image: url(../images/main/img_media02.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="txt">
+                          AI 서울 정상회의 및 AI 글로벌 포럼 합동브리핑
+                        </div>
+                      </a>
+                    </li>
+                    <li class="swiper-slide">
+                      <a href="#" class="inbox">
+                        <div class="imgbox">
+                          <div
+                            class="img"
+                            style="
+                              background-image: url(../images/main/img_media03.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="txt">AI 글로벌 포럼 개회식</div>
+                      </a>
+                    </li>
+                    <li class="swiper-slide">
+                      <a href="#" class="inbox">
+                        <div class="imgbox">
+                          <div
+                            class="img"
+                            style="
+                              background-image: url();
+                            "
+                          ></div>
+                        </div>
+                        <div class="txt">
+                          AI 시대 클라우드 산업 활성화 간담회
+                        </div>
+                      </a>
+                    </li>
+                    <li class="swiper-slide">
+                      <a href="#" class="inbox">
+                        <div class="imgbox">
+                          <div
+                            class="img"
+                            style="
+                              background-image: url(../images/main/img_media03.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="txt">AI 글로벌 포럼 개회식</div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- data없을시 -->
+                <!-- <div class="nodata_box_wrap">
+                  <div class="nodata_box">
+                    <div
+                      class="ico"
+                      style="
+                        background-image: url(../images/bg_40_nodata_8e8e8e.svg);
+                      "
+                    ></div>
+                    <p class="txt" style="color: #717171">
+                      등록된 게시글이 없습니다.
+                    </p>
+                  </div>
+                </div> -->
+                <!--// data없을시 -->
+                <div class="swiper_ctrl">
+                  <button type="button" class="swiper-button-prev"></button>
+                  <button type="button" class="swiper-button-next"></button>
+                  <a href="#" class="btn_more">사진 및 동영상 자료 더보기</a>
+                </div>
+                <script>
+                  var maMedia = new Swiper(".ma_media .swiper-container", {
+                    slidesPerView: 4,
+                    spaceBetween: 24,
+                    breakpoints: {
+                      1279: {
+                        slidesPerView: 2,
+                        spaceBetween: 16,
+                      },
+                      767: {
+                        slidesPerView: 1,
+                        spaceBetween: 16,
+                      },
+                    },
+                    observer: true,
+                    observeParents: true,
+                    navigation: {
+                      nextEl: ".ma_media .swiper-button-next",
+                      prevEl: ".ma_media .swiper-button-prev",
+                    },
+                  });
+                </script>
+              </div>
+            </div>
+          </div>
+          <!--// 사진 및 동영상 자료 -->
         </div>
         <!-- ma_content -->
 
         <!-- 배너 모음 -->
-
+        <div class="ma_banners_wrap">
+          <div class="inner_center">
+            <div class="ma_banners">
+              <div class="swiper_ctrl">
+                <div class="swiper-pagination"></div>
+                <button type="button" class="swiper-button-prev"></button>
+                <button type="button" class="btn_stop_play">
+                  자동슬라이드 정지/시작
+                </button>
+                <button type="button" class="swiper-button-next"></button>
+              </div>
+              <div class="swiper-container">
+                <ul class="swiper-wrapper">
+                  <li class="swiper-slide">
+                    <a href="#" target="_blank" title="새창으로 열기"
+                      ><img src="../images/main/foot_banner01.png" alt=""
+                    /></a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a href="#" target="_blank" title="새창으로 열기"
+                      ><img src="../images/main/foot_banner02.png" alt=""
+                    /></a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a href="#" target="_blank" title="새창으로 열기"
+                      ><img src="../images/main/foot_banner03.png" alt=""
+                    /></a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a href="#" target="_blank" title="새창으로 열기"
+                      ><img src="../images/main/foot_banner04.png" alt=""
+                    /></a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a href="#" target="_blank" title="새창으로 열기"
+                      ><img src="../images/main/foot_banner05.png" alt=""
+                    /></a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a href="#" target="_blank" title="새창으로 열기"
+                      ><img src="../images/main/foot_banner01.png" alt=""
+                    /></a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a href="#" target="_blank" title="새창으로 열기"
+                      ><img src="../images/main/foot_banner02.png" alt=""
+                    /></a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a href="#" target="_blank" title="새창으로 열기"
+                      ><img src="../images/main/foot_banner03.png" alt=""
+                    /></a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a href="#" target="_blank" title="새창으로 열기"
+                      ><img src="../images/main/foot_banner04.png" alt=""
+                    /></a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a href="#" target="_blank" title="새창으로 열기"
+                      ><img src="../images/main/foot_banner05.png" alt=""
+                    /></a>
+                  </li>
+                </ul>
+              </div>
+              <script>
+                var footBnSwiper = new Swiper(".ma_banners .swiper-container", {
+                  autoplay: {
+                    delay: 4000,
+                    stopOnLastSlide: false,
+                    disableOnInteraction: true,
+                  },
+                  slidesPerView: "auto",
+                  breakpoints: {
+                    767: {
+                      slidesPerView: 1,
+                      spaceBetween: 16,
+                    },
+                  },
+                  observer: true,
+                  observeParents: true,
+                  pagination: {
+                    el: ".ma_banners .swiper-pagination",
+                    type: "custom",
+                    renderCustom: function (swiper, current, total) {
+                      return (
+                        '<span class="current">' +
+                        current +
+                        "</span>" +
+                        '<span class="slash">/</span>' +
+                        '<span class="total">' +
+                        total +
+                        "</span>"
+                      );
+                    },
+                  },
+                  navigation: {
+                    nextEl: ".ma_banners .swiper-button-next",
+                    prevEl: ".ma_banners .swiper-button-prev",
+                  },
+                  on: {
+                    init: function (swiper) {
+                      //자동play 켜고닫기
+                      $(".ma_banners .swiper_ctrl .btn_stop_play").click(
+                        function () {
+                          if ($(this).hasClass("stop")) {
+                            footBnSwiper.autoplay.start();
+                          } else {
+                            footBnSwiper.autoplay.stop();
+                          }
+                        }
+                      );
+                    },
+                    autoplayStart: function () {
+                      $(".ma_banners .swiper_ctrl .btn_stop_play").removeClass(
+                        "stop"
+                      );
+                    },
+                    autoplayStop: function () {
+                      $(".ma_banners .swiper_ctrl .btn_stop_play").addClass(
+                        "stop"
+                      );
+                    },
+                  },
+                });
+                $(".ma_banners .swiper-slide a").each(function (index) {
+                  $(this).on("focus", function (e) {
+                    e.preventDefault();
+                    footBnSwiper.slideTo(index);
+                  });
+                });
+              </script>
+            </div>
+          </div>
+        </div>
         <!--// 배너 모음 -->
 
         <!-- btn top -->

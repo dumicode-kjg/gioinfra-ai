@@ -4,7 +4,7 @@
   display: flex;
   flex-wrap: wrap;
   position: absolute;
-  top: 130px;
+  top: 104px;
   right: 0;
   left: 0;
   z-index: 9999;
@@ -19,29 +19,29 @@
 }
 .main_notice_pop .pop_con .btns {
   display: flex;
-  background: #212121;
+  background: #1d1d1d;
 }
 .main_notice_pop .pop_con .btns .btn_invisible {
   flex: 1;
   position: relative;
-  padding: 13px 0;
+  padding: 10px 0;
   border: none;
-  background: #555;
+  background: #2d2d2d;
   color: #fff;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 17px;
+  line-height: 26px;
   font-weight: 500;
   letter-spacing: -0.8px;
 }
 .main_notice_pop .pop_con .btns .btn_close {
   flex: 1;
   position: relative;
-  padding: 13px 0;
+  padding: 10px 0;
   border: none;
   background: #1d1d1d;
   color: #fff;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 17px;
+  line-height: 26px;
   font-weight: 500;
   letter-spacing: -0.8px;
 }
@@ -477,7 +477,6 @@
 
 #container {
   position: relative;
-  min-height: calc(100vh - 330px);
 }
 
 /* btn top */
@@ -559,6 +558,8 @@
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
   transform: scale(0.75) translateY(56px);
+  transition: 0s;
+  z-index: 20;
 }
 #footer .foot_family .nice-select .option {
   display: flex;
@@ -684,7 +685,7 @@
 
 @media screen and (max-width: 1279px) {
   .main_notice_pop {
-    top: 92px;
+    top: 64px;
   }
   .main_notice_pop .pop_con {
     position: absolute;
@@ -1018,12 +1019,15 @@
   }
 
   /* header white */
+  #mHeader.hover,
   #mHeader.white {
     background-color: #fff;
   }
+  #mHeader.hover::before,
   #mHeader.white::before {
     background-color: #d8d8d8;
   }
+  #mHeader.hover .logo a,
   #mHeader.white .logo a {
     background-position: center center, -9999px center;
   }
@@ -1033,7 +1037,6 @@
   }
 
   #container {
-    min-height: calc(100vh - 384px);
   }
 
   .go_top {
@@ -1049,25 +1052,13 @@
 /* mobile */
 @media screen and (max-width: 767px) {
   .main_notice_pop {
-    top: 70px;
+    top: 64px;
   }
   .main_notice_pop .pop_con {
     right: 16px;
     left: 16px;
     width: auto;
     margin-left: 0;
-  }
-  .main_notice_pop .pop_con .btns .btn_invisible {
-    padding: 10px 0;
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: -0.7px;
-  }
-  .main_notice_pop .pop_con .btns .btn_close {
-    padding: 10px 0;
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: -0.7px;
   }
 
   .mobile_br {
@@ -1095,10 +1086,10 @@
   }
 
   #container {
-    min-height: calc(100vh - 620px);
   }
 
   .go_top {
+    bottom: 113px;
     width: 51px;
     height: 49px;
     font-size: 14px;

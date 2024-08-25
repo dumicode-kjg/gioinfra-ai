@@ -58,6 +58,14 @@ $(function () {
     },
   });
 
+  //main news tab
+  var $newsTabLink = $(".ma_news_tab a");
+  $newsTabLink.on("click focus", function (e) {
+    e.preventDefault();
+    $(this).parents(".ma_news_tab").find("> li").removeClass("active");
+    $(this).parents(".ma_news_tab > li").addClass("active");
+  });
+
   //main committee tab
   var $newsTabLink = $(".ma_committee_tab a");
   $newsTabLink.on("click focus", function (e) {
