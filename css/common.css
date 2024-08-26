@@ -284,8 +284,7 @@
   width: 16px;
   height: 16px;
   margin-top: -8px;
-  background: url(../images/ico_16_arrow_down_white.svg) no-repeat
-    center/contain;
+  background: url(../images/ico_16_arrow_down_white.svg) no-repeat center/contain;
 }
 .drop_wrap .drop_menu {
   display: none;
@@ -390,8 +389,7 @@
   right: 16px;
   width: 20px;
   height: 20px;
-  background-image: url(../images/ico_20_search_black.svg),
-    url(../images/ico_20_search_white.svg);
+  background-image: url(../images/ico_20_search_black.svg), url(../images/ico_20_search_white.svg);
   background-repeat: no-repeat, no-repeat;
   background-position: -9999px center, center center;
   background-size: contain, contain;
@@ -635,8 +633,7 @@
   width: 20px;
   height: 20px;
   margin: 0 2px 0 4px;
-  background: url(../images/ico_20_arrow_right_black.svg) no-repeat
-    center/contain;
+  background: url(../images/ico_20_arrow_right_black.svg) no-repeat center/contain;
 }
 #footer .foot_link_copyright {
   padding: 18px 0 20px;
@@ -854,8 +851,7 @@
     height: 24px;
     padding: 0 22px 0 4px;
     border: none;
-    background: url(../images/ico_16_arrow_down_black.svg) no-repeat right 4px
-      center/16px;
+    background: url(../images/ico_16_arrow_down_black.svg) no-repeat right 4px center/16px;
     color: #1d1d1d;
     font-size: 15px;
     font-weight: 400;

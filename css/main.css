@@ -40,12 +40,7 @@
   bottom: 0;
   left: 0;
   border-radius: inherit;
-  background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0) 66.76%,
-      rgba(0, 0, 0, 0.9) 119.26%
-    ),
-    linear-gradient(0deg, rgba(0, 0, 0, 0) 55.96%, #000 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 66.76%, rgba(0, 0, 0, 0.9) 119.26%), linear-gradient(0deg, rgba(0, 0, 0, 0) 55.96%, #000 100%);
 
   pointer-events: none;
 }
@@ -62,8 +57,7 @@
   bottom: 0;
   left: 0;
   width: 9999px;
-  background: url(../images/main/bg_ma_visual_txt.png) no-repeat left bottom /
-    auto 556px;
+  background: url(../images/main/bg_ma_visual_txt.png) no-repeat left bottom / auto 556px;
   background-color: #000742;
   z-index: -1;
   pointer-events: none;
@@ -190,12 +184,10 @@
   opacity: 1;
 }
 .ma_visual .swiper-button-prev {
-  background-image: url(../images/btn_34_prev_on.svg),
-    url(../images/btn_34_prev.svg);
+  background-image: url(../images/btn_34_prev_on.svg), url(../images/btn_34_prev.svg);
 }
 .ma_visual .swiper-button-next {
-  background-image: url(../images/btn_34_next_on.svg),
-    url(../images/btn_34_next.svg);
+  background-image: url(../images/btn_34_next_on.svg), url(../images/btn_34_next.svg);
 }
 .ma_visual .swiper-button-prev,
 .ma_visual .swiper-button-next {
@@ -220,8 +212,7 @@
   height: 34px;
   margin: 0 0 0 8px;
   background-color: transparent;
-  background-image: url(../images/btn_34_stop_on.svg),
-    url(../images/btn_34_stop.svg);
+  background-image: url(../images/btn_34_stop_on.svg), url(../images/btn_34_stop.svg);
   background-repeat: no-repeat, no-repeat;
   background-position: -9999px center, center center;
   background-size: contain, contain;
@@ -230,8 +221,7 @@
   z-index: 10;
 }
 .ma_visual .btn_stop_play.stop {
-  background-image: url(../images/btn_34_play_on.svg),
-    url(../images/btn_34_play.svg);
+  background-image: url(../images/btn_34_play_on.svg), url(../images/btn_34_play.svg);
 }
 .ma_visual .btn_stop_play:hover {
   background-position: center center, -9999px center;
@@ -384,12 +374,10 @@
   background-color: #fff;
 }
 .ma_news_tab .swiper_ctrl .swiper-button-prev {
-  background-image: url(../images/btn_34_swiper_prev_disabled.svg),
-    url(../images/btn_34_swiper_prev.svg);
+  background-image: url(../images/btn_34_swiper_prev_disabled.svg), url(../images/btn_34_swiper_prev.svg);
 }
 .ma_news_tab .swiper_ctrl .swiper-button-next {
-  background-image: url(../images/btn_34_swiper_next_disabled.svg),
-    url(../images/btn_34_swiper_next.svg);
+  background-image: url(../images/btn_34_swiper_next_disabled.svg), url(../images/btn_34_swiper_next.svg);
 }
 .ma_news_tab .swiper_ctrl .swiper-button-prev,
 .ma_news_tab .swiper_ctrl .swiper-button-next {
@@ -693,8 +681,7 @@
   height: 34px;
   margin: 7px 0 7px 24px;
   border-radius: 8px;
-  background-image: url(../images/btn_34_more.svg),
-    url(../images/btn_34_more_white.svg);
+  background-image: url(../images/btn_34_more.svg), url(../images/btn_34_more_white.svg);
   background-repeat: no-repeat, no-repeat;
   background-position: -9999px center, center center;
   background-size: contain, contain;
@@ -937,12 +924,10 @@
   background-color: #fff;
 }
 .ma_cardnews .swiper_ctrl .swiper-button-prev {
-  background-image: url(../images/btn_34_swiper_prev_disabled.svg),
-    url(../images/btn_34_swiper_prev.svg);
+  background-image: url(../images/btn_34_swiper_prev_disabled.svg), url(../images/btn_34_swiper_prev.svg);
 }
 .ma_cardnews .swiper_ctrl .swiper-button-next {
-  background-image: url(../images/btn_34_swiper_next_disabled.svg),
-    url(../images/btn_34_swiper_next.svg);
+  background-image: url(../images/btn_34_swiper_next_disabled.svg), url(../images/btn_34_swiper_next.svg);
 }
 .ma_cardnews .swiper_ctrl .swiper-button-prev,
 .ma_cardnews .swiper_ctrl .swiper-button-next {
@@ -1039,12 +1024,10 @@
   background-color: #fff;
 }
 .ma_media .swiper_ctrl .swiper-button-prev {
-  background-image: url(../images/btn_34_swiper_prev_disabled.svg),
-    url(../images/btn_34_swiper_prev.svg);
+  background-image: url(../images/btn_34_swiper_prev_disabled.svg), url(../images/btn_34_swiper_prev.svg);
 }
 .ma_media .swiper_ctrl .swiper-button-next {
-  background-image: url(../images/btn_34_swiper_next_disabled.svg),
-    url(../images/btn_34_swiper_next.svg);
+  background-image: url(../images/btn_34_swiper_next_disabled.svg), url(../images/btn_34_swiper_next.svg);
 }
 .ma_media .swiper_ctrl .swiper-button-prev,
 .ma_media .swiper_ctrl .swiper-button-next {
@@ -1107,12 +1090,10 @@
   margin: 0 3px;
 }
 .ma_banners .swiper_ctrl .swiper-button-prev {
-  background-image: url(../images/btn_24_prev_blue.svg),
-    url(../images/btn_24_prev_black.svg);
+  background-image: url(../images/btn_24_prev_blue.svg), url(../images/btn_24_prev_black.svg);
 }
 .ma_banners .swiper_ctrl .swiper-button-next {
-  background-image: url(../images/btn_24_next_blue.svg),
-    url(../images/btn_24_next_black.svg);
+  background-image: url(../images/btn_24_next_blue.svg), url(../images/btn_24_next_black.svg);
 }
 .ma_banners .swiper_ctrl .swiper-button-prev,
 .ma_banners .swiper_ctrl .swiper-button-next {
@@ -1135,8 +1116,7 @@
   width: 24px;
   height: 24px;
   background-color: transparent;
-  background-image: url(../images/btn_24_stop_blue.svg),
-    url(../images/btn_24_stop_black.svg);
+  background-image: url(../images/btn_24_stop_blue.svg), url(../images/btn_24_stop_black.svg);
   background-repeat: no-repeat, no-repeat;
   background-position: -9999px center, center center;
   background-size: contain, contain;
@@ -1145,8 +1125,7 @@
   z-index: 10;
 }
 .ma_banners .swiper_ctrl .btn_stop_play.stop {
-  background-image: url(../images/btn_24_play_blue.svg),
-    url(../images/btn_24_play_black.svg);
+  background-image: url(../images/btn_24_play_blue.svg), url(../images/btn_24_play_black.svg);
 }
 .ma_banners .swiper_ctrl .btn_stop_play:hover {
   background-position: center center, -9999px center;
