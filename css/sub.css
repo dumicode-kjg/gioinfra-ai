@@ -222,7 +222,8 @@
   overflow: hidden;
 }
 .sub_con_head .right_btns > li > .ico.ico_share {
-  background-image: url(../images/btn_40_share_black.svg);
+  /* background-image: url(../images/btn_40_share_black.svg); */
+  background-image: url(../images/btn_40_share_black.png);
 }
 .sub_con_head .right_btns > li > .ico.ico_print {
   background-image: url(../images/btn_40_print_black.svg);

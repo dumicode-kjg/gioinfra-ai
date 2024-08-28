@@ -90,7 +90,7 @@ $(function () {
 
 //모바일 통합검색
 function toggleSearch() {
-  $("body").toggleClass("openSearch");
+  $("body").removeClass("openAllMenu").toggleClass("openSearch");
   if ($("#m_search_wrap").css("display") !== "none") {
     $("#mHeadSearch").focus();
   }
@@ -98,8 +98,7 @@ function toggleSearch() {
 
 //모바일 전체메뉴
 function toggleAllMenu() {
-  $("body").removeClass("openSearch");
-  $("body").toggleClass("openAllMenu");
+  $("body").removeClass("openSearch").toggleClass("openAllMenu");
 }
 
 //go top 위치
@@ -116,12 +115,7 @@ function chkGoTop() {
     $(".go_top").hide();
   }
 
-  if (
-    $(window).scrollTop() >
-    $(document).outerHeight() -
-      $(window).outerHeight() -
-      $("#footer").outerHeight()
-  ) {
+  if ($(window).scrollTop() > $(document).outerHeight() - $(window).outerHeight() - $("#footer").outerHeight()) {
     $(".go_top").addClass("end_top");
   } else {
     $(".go_top").removeClass("end_top");
@@ -131,25 +125,21 @@ function chkGoTop() {
 //popup
 // 접근성 관련 포커스 강제 이동
 function accessibilityFocus() {
-  $(document).on(
-    "keydown",
-    "[data-focus-prev], [data-focus-next]",
-    function (e) {
-      var next = $(e.target).attr("data-focus-next"),
-        prev = $(e.target).attr("data-focus-prev"),
-        target = next || prev || false;
+  $(document).on("keydown", "[data-focus-prev], [data-focus-next]", function (e) {
+    var next = $(e.target).attr("data-focus-next"),
+      prev = $(e.target).attr("data-focus-prev"),
+      target = next || prev || false;
 
-      if (!target || e.keyCode != 9) {
-        return;
-      }
-
-      if ((!e.shiftKey && !!next) || (e.shiftKey && !!prev)) {
-        setTimeout(function () {
-          $('[data-focus="' + target + '"]').focus();
-        }, 1);
-      }
+    if (!target || e.keyCode != 9) {
+      return;
     }
-  );
+
+    if ((!e.shiftKey && !!next) || (e.shiftKey && !!prev)) {
+      setTimeout(function () {
+        $('[data-focus="' + target + '"]').focus();
+      }, 1);
+    }
+  });
 }
 
 function tooltip() {

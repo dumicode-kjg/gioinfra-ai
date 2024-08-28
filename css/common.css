@@ -633,7 +633,16 @@
   width: 20px;
   height: 20px;
   margin: 0 2px 0 4px;
-  background: url(../images/ico_20_arrow_right_black.svg) no-repeat center/contain;
+  background-image: url(../images/ico_20_arrow_right_blue.svg), url(../images/ico_20_arrow_right_black.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: -9999px center, center center;
+  background-size: contain, contain;
+}
+#footer .foot_address .link_box li a:hover {
+  color: #004bd1;
+}
+#footer .foot_address .link_box li a:hover::after {
+  background-position: center center, -9999px center;
 }
 #footer .foot_link_copyright {
   padding: 18px 0 20px;
@@ -648,6 +657,10 @@
 #footer .foot_link li a {
   font-size: 17px;
   line-height: 26px;
+}
+#footer .foot_link li a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 #footer .foot_link li a.active {
   font-weight: 700;
@@ -744,7 +757,7 @@
     padding: 0 16px;
     margin-left: auto;
     border-bottom-left-radius: 24px;
-    border-radius: 0px 0px 0px 40px;
+    border-radius: 0px 0px 0px 24px;
     background: linear-gradient(120deg, #871a4a -0.14%, #1b3dc5 101.69%);
   }
   #mHeader .btns .btn_search {
@@ -928,9 +941,7 @@
     line-height: 26px;
   }
   .m_allmenu .m_gnb > li > a.active {
-    border-radius: 0px 0px 0px 40px;
     background: linear-gradient(120deg, #871a4a -0.14%, #1b3dc5 101.69%);
-
     color: #fff;
   }
 
@@ -958,7 +969,7 @@
     font-weight: 700;
   }
   .m_allmenu .m_gnb .depth_box .depth {
-    padding: 0 16px;
+    padding: 8px 16px;
     border-bottom: 1px solid #d8d8d8;
     overflow-y: auto;
   }

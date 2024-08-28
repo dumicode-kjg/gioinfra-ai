@@ -361,6 +361,10 @@
   background: url(../images/ico_12_plus_black.svg) no-repeat center/contain;
   transition: 0.5s;
 }
+.ma_news_tab .inbox:hover .tit {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
 .ma_news_tab .inbox:hover .date_more .more::after {
   transform: rotate(-180deg);
 }
@@ -549,6 +553,7 @@
   border-radius: inherit;
   pointer-events: none;
 }
+.ma_committee_tab > li > a:hover,
 .ma_committee_tab > li.active > a {
   background-color: #fff;
   color: #1d1d1d;
