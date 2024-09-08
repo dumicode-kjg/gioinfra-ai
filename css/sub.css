@@ -615,6 +615,9 @@
   .sub_tabbox > ul > li:nth-child(4n) {
     border-right: 1px solid #d8d8d8;
   }
+  .sub_tabbox > ul > li:nth-child(3n) {
+    border-right: none;
+  }
   .sub_tabbox > ul > li.active {
     border-color: #ce336c;
   }
@@ -695,13 +698,10 @@
     position: relative;
     width: 100% !important;
     margin: 0;
-    border: none;
+    border: none !important;
     border-top: 1px solid #d8d8d8 !important;
     background-color: #fff;
     overflow: hidden;
-  }
-  .sub_tabbox > ul > li:nth-child(-n + 4) {
-    border-right: none;
   }
   .sub_tabbox > ul > li > a {
     justify-content: flex-start;
